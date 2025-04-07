@@ -8,11 +8,11 @@ function reload() {
 }
 
 async function fetchNews(query) {
-    const res = await fetch(`${url}${query}&apikey=${API_KEY}`);
+    const res = await fetch(`/api/news?q=${query}`);
     const data = await res.json();
-
     bindData(data.articles);
 }
+
 
 function bindData(articles) {
     const cardsContainer = document.getElementById("cards-container");
