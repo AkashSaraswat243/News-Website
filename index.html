@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" class="company-logo" onclick="reload()">
+          <img src="./assets/nav-img.svg" alt="company logo" />
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-links nav-item"
+              id="ipl"
+              onclick="onNavItemClick('ipl')"
+            >
+              IPL
+            </li>
+            <li
+              class="hover-links nav-item"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="hover-links nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+            <li
+              class="hover-links nav-item"
+              id="technology"
+              onclick="onNavItemClick('technology')"
+            >
+              Technology
+            </li>
+          </ul>
+        </div>
+
+        <div class="search-bar flex">
+          <input
+            type="text"
+            class="news-input"
+            id="search-text"
+            placeholder="e.g. Science"
+          />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main bar -->
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://www.verance.com/app/uploads/2017/01/400x200.png"
+            alt="news-image"
+            id="news-img"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the Title</h3>
+          <h6 class="news-source" id="news-source">End Gadget 26/03/2024</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+            nostrum ut, vitae consequuntur commodi mollitia? Repudiandae saepe
+            eos esse ab.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <div class="slider">
+      <div class="slide-text">This News Website Made By Akash Saraswat</div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
